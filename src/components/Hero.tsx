@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink flex flex-col"
+      className="relative min-h-[100svh] w-full bg-ink flex flex-col overflow-x-hidden"
     >
       {/* Ambient background layer */}
       <div className="absolute inset-0">

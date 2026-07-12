@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 border-b border-brass-light/10 ${
-        scrolled ? "bg-ink/95 backdrop-blur-sm shadow-lg shadow-black/20" : "bg-transparent"
+        scrolled || open ? "bg-ink/95 backdrop-blur-sm shadow-lg shadow-black/20" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 md:px-10 flex items-center justify-between h-20">
