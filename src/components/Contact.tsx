@@ -51,7 +51,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 space-y-5"
+            className="lg:col-span-2 space-y-5 w-full"
           >
             <div className="border border-brass bg-white/60 backdrop-blur-sm rounded-sm p-5">
               <ContactItem icon={<Phone size={18} />} label="Phone / WhatsApp">
@@ -98,7 +98,7 @@ export default function Contact() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
             onSubmit={handleSubmit}
-            className="lg:col-span-3 bg-white/60 backdrop-blur-sm border border-brass rounded-sm p-8 md:p-10 space-y-5"
+            className="lg:col-span-3 bg-white/60 backdrop-blur-sm border border-brass rounded-sm p-5 md:p-10 space-y-5 w-full"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Your Name">
