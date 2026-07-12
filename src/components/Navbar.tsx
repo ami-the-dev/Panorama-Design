@@ -77,7 +77,18 @@ export default function Navbar() {
             <ul className="flex flex-col px-6 py-4 gap-4 font-body text-mist">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} onClick={() => setOpen(false)} className="block py-1">
+                  <a
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpen(false);
+                      requestAnimationFrame(() => {
+                        const el = document.querySelector(link.href);
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      });
+                    }}
+                    className="block py-1"
+                  >
                     {link.label}
                   </a>
                 </li>

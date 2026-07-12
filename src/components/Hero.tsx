@@ -145,7 +145,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 0.8 }}
-          className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full pt-6"
+          className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full pt-6 mb-10 md:mb-14"
         >
           {heroStats.map((stat) => (
             <div key={stat.label} className="border border-brass-light/15 bg-dusk/30 backdrop-blur-sm rounded-full px-4 py-2.5 md:px-6 md:py-3 flex items-center gap-3">
