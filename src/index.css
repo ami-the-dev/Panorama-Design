@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #b8874a;
+    color: #f6f4ef;
+  }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", serif;
+  }
+}
+
+@layer components {
+  .field-input {
+    @apply w-full bg-white border border-brass text-char placeholder:text-char/40 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brass transition-colors;
+  }
+}
+
+@layer utilities {
+  /* Mullion divider — the thin cross-line motif used throughout, echoing
+     the actual internal chambers of a uPVC profile cross-section. */
+  .mullion-line {
+    position: relative;
+  }
+  .mullion-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(124, 147, 163, 0.4) 20%, rgba(124, 147, 163, 0.4) 80%, transparent);
+  }
+
+  .mullion-line-dark::before {
+    background: linear-gradient(90deg, transparent, rgba(217, 173, 117, 0.3) 20%, rgba(217, 173, 117, 0.3) 80%, transparent);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain-overlay {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
