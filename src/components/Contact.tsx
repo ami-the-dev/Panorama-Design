@@ -78,7 +78,7 @@ export default function Contact() {
               </ContactItem>
             </div>
 
-            <div className="border border-brass bg-white/60 backdrop-blur-sm rounded-sm p-0 overflow-hidden h-48">
+            <div className="border border-brass bg-white/60 backdrop-blur-sm rounded-sm overflow-hidden h-48">
               <iframe
                 title="Panorama Design Location"
                 src="https://www.google.com/maps?q=UG-15+Ocus+Quantum+Mall+Sector-51+Gurugram+Haryana+122001&output=embed"
@@ -189,7 +189,7 @@ function ContactItem({
       <span className="flex-shrink-0 w-10 h-10 rounded-full border border-brass/40 flex items-center justify-center text-brass">
         {icon}
       </span>
-      <div>
+      <div className="flex-1 min-w-0">
         <p className="font-mono text-[11px] uppercase tracking-wider text-char/50">{label}</p>
         <p className="text-char/80 mt-0.5">{children}</p>
       </div>
